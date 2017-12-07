@@ -1,0 +1,602 @@
+@font-face {
+  font-family: "Cabin Italic";
+  src: url("../fonts/Cabin/Cabin-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Cabin Semibold";
+  src: url("../fonts/Cabin/Cabin-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Cabin MediumItalic";
+  src: url("../fonts/Cabin/Cabin-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "Cabin Regular";
+  src: url("../fonts/Cabin/Cabin-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Cabin BoldItalic";
+  src: url("../fonts/Cabin/Cabin-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Cabin Medium";
+  src: url("../fonts/Cabin/Cabin-Medium.ttf");
+}
+
+@font-face {
+  font-family: "stencil";
+  src: url("../fonts/StencilStd.otf");
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #292929;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 87px;
+  color: white;
+  display: flex;
+  font-family: "Cabin Italic";
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .right-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .image {
+  height: 66px;
+  margin: auto 0;
+}
+
+.header .black-filter {
+  height: 50px;
+  width: 54px;
+  background-color: black;
+  position: relative;
+  right: 68px;
+  bottom: 1px;
+  opacity: 0;
+  z-index: 3;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.header .black-filter:hover {
+  opacity: 0.2;
+}
+
+.header .navigation {
+  margin: auto 0;
+}
+
+.header .liste {
+  display: flex;
+  font-size: 34px;
+  justify-content: space-around;
+}
+
+.home {
+  padding: 10px 10px 0 18px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.home:hover {
+  background-color: white;
+}
+
+.home:hover>.link-home {
+  color: black;
+}
+
+.pipe {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.apropos {
+  padding: 10px 18px 10px 10px;
+}
+
+.home, .apropos {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.apropos:hover {
+  background-color: white;
+}
+
+.apropos:hover>.link-apropos {
+  color: black;
+}
+
+.header .language {
+  display: flex;
+  margin: auto 0;
+  margin-left: 75px;
+}
+
+.french, .english {
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.french {
+  color: black;
+  background-color: white;
+}
+
+.english:hover {
+  color: black;
+  background-color: white;
+}
+
+.partie1 {
+  height: 831px;
+  color: white;
+  display: flex;
+  overflow: hidden;
+}
+
+.videoPartie1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px;
+  object-fit: fill;
+  z-index: -100;
+}
+
+.partie1 .content {
+  width: 580px;
+  margin: 216px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Cabin Regular";
+}
+
+.content .paragraph {
+  font-size: 32px;
+  font-family: "Cabin Regular";
+  word-spacing: 5px;
+  line-height: 40px;
+  text-shadow: 1px 1px black;
+}
+
+.btn1 {
+  border: 1px solid white;
+  padding: 23px 48px 23px 48px;
+  margin: 45px auto 0 auto;
+  transition-property: background-color, font-weight;
+  transition-duration: 0.5s;
+  color: white;
+  text-decoration: none;
+}
+
+.btn1:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.middlecontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 1325px;
+  margin-right: auto;
+  height: 1110px;
+  width: 70%;
+}
+
+.banner1, .banner2, .banner31, .banner32, .banner33 {
+  height: 355px;
+  border: 9px solid white;
+  overflow: hidden;
+}
+
+.banner1-black, .banner2-black {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 355px;
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  color: white;
+  padding-left: 92px;
+  font-family: "Cabin Semibold";
+}
+
+.banner1-black .title, .banner2-black .title {
+  padding-top: 68px;
+  text-transform: uppercase;
+  font-size: 72px;
+  font-family: "stencil";
+  margin-bottom: 30px;
+}
+
+.banner1-black .paragraph, .banner2-black .paragraph {
+  padding-right: 260px;
+  line-height: 24px;
+}
+
+.banner1-black:hover, .banner2-black:hover {
+  opacity: 1;
+}
+
+.banner1-image {
+  background-image: url("../media/img/artiste/banksy.jpg");
+  height: 355px;
+  position: relative;
+  bottom: 355px;
+  background-size: 100% auto;
+}
+
+.banner2 {
+  height: 355px;
+  border: 9px solid white;
+  margin-top: 11px;
+}
+
+.banner2-image {
+  background-image: url("../media/img/artiste/shepard.jpg");
+  height: 355px;
+  position: relative;
+  bottom: 355px;
+  background-size: 100% auto;
+}
+
+.banner3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+
+.banner31, .banner32, .banner33 {
+  height: 321px;
+  width: 32.5%;
+  border: 9px solid white;
+}
+
+.banner31-black, .banner32-black, .banner33-black {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 321px;
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  color: white;
+  font-family: "Cabin Semibold";
+  display: flex;
+}
+
+.banner31-black .title, .banner32-black .title, .banner33-black .title {
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 72px;
+  font-family: "stencil";
+}
+
+.banner33-black .title {
+  font-size: 50px;
+}
+
+.banner32-black .title {
+  margin-left: 25%;
+  width: 150px;
+  text-align: center;
+}
+
+.banner31-black:hover, .banner32-black:hover, .banner33-black:hover {
+  opacity: 1;
+}
+
+.banner31-image, .banner32-image, .banner33-image {
+  height: 321px;
+  position: relative;
+  bottom: 321px;
+  background-size: auto 100%;
+}
+
+.banner31-image {
+  background-image: url("../media/img/artiste/jr.png");
+}
+
+.banner32-image {
+  background-image: url("../media/img/artiste/ella-pitr.jpg");
+}
+
+.banner33-image {
+  background-image: url("../media/img/artiste/invader.jpg");
+}
+
+.partie2 {
+  background-color: #292929;
+  height: 803px;
+}
+
+.partie3 {
+  background-color: #292929;
+  height: 595px;
+  text-align: center;
+}
+
+.chrono {
+  font-family: "Cabin Regular";
+  font-size: 142px;
+  color: white;
+  position: relative;
+  top: 320px;
+}
+
+.partie4 {
+  background-color: #292929;
+  height: 510px;
+}
+
+.newsletter-box {
+  height: 163px;
+  background-color: black;
+  display: flex;
+}
+
+.newsletter-btn {
+  background-color: white;
+  width: 457px;
+  height: 48px;
+  border-radius: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+  border: 1px solid white;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.newsletter-btn:hover {
+  background-color: black;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.newsletter-btn:hover>.news-left, .newsletter-btn:hover>.news-right {
+  color: rgb(150, 150, 150);
+}
+
+.news-left, .news-right {
+  font-family: "Cabin Italic";
+  color: rgba(0, 0, 0, 0.5)
+}
+
+.footer {
+  height: 50px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imgFooter {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.vide {
+  margin-right: 50px;
+}
+
+.copyright {
+  margin-top: 10px;
+  margin-right: 30px;
+  font-size: 10px;
+}
+
+/*Slider !!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+* {
+  box-sizing: border-box
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  background-color: black;
+}
+
+.threePoints {
+  position: relative;
+  bottom: 50px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  font-size: 27px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px
+  }
+}
+
+.part2-slider {
+  height: 710px;
+  background-color: #292929;
+  margin-top: -20px;
+}
+
+.artist-profil-container {
+  position: absolute;
+  top: 625px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-profil-container .photo {
+  width: 523px;
+  height: 523px;
+  border: 9px solid white;
+  margin: 0 auto;
+}
+
+.artist-profil-container .paragraph {
+  width: 1000px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Cabin MediumItalic";
+  text-transform: uppercase;
+  margin-top: 123px;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.artist-profil-container .black-filter {
+  background-color: black;
+  width: 523px;
+  height: 523px;
+  position: absolute;
+  bottom: 300px;
+  left: 29.45%;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 160px;
+  font-family: "Cabin MediumItalic";
+}
+
+.artist-profil-container .black-filter:hover {
+  opacity: 0.5;
+}
+
+.banksyLink, .shepardLink, .jrLink, .ellaLink, .invaderLink {
+  text-decoration: none;
+}
